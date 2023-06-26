@@ -18,6 +18,11 @@ function drawGrid() {
     ctx.lineTo(x * gridSize, height);
   }
 
+  for (let y = 1; y < vSize; y++) {
+    ctx.moveTo(0, y * gridSize);
+    ctx.lineTo(width, y * gridSize);
+  }
+  ctx.closePath();
   ctx.stroke();
 }
 
