@@ -8,6 +8,11 @@ const hSize = 20;
 const vSize = 20;
 const gridSize = width / hSize;
 
+const snake = {
+  x: 10,
+  y: 10,
+};
+
 function drawGrid() {
   ctx.strokeStyle = '#999999';
 
@@ -26,4 +31,10 @@ function drawGrid() {
   ctx.stroke();
 }
 
+function rect(x, y, color) {
+  ctx.fillStyle = color;
+  const snake = ctx.fillRect(x * gridSize, y * gridSize, gridSize, gridSize);
+}
+
 drawGrid();
+rect(snake.x, snake.y, 'orange');
